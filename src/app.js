@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import upload from './services/upload.js'
 import __dirname from './utils.js'
 import productsRouter from './routes/productsRoute.js'
 import cartsRouter from './routes/cartsRoute.js'

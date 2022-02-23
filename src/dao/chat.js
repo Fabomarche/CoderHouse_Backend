@@ -1,4 +1,4 @@
-import Container from "../../containers/Container.js";
+import Container from "../containers/Container.js";
 import messages from "../model/messages.js"
 import { normalize, schema } from 'normalizr'
 

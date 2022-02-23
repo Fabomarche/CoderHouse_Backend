@@ -1,6 +1,4 @@
 import Container from "../containers/Container.js";
-import messages from "../model/messages.js"
-import { normalize, schema } from 'normalizr'
 
 export default class Chat extends Container{
     constructor(){
@@ -15,13 +13,7 @@ export default class Chat extends Container{
             let documents = await this.collection.find()
             let chats = {id:'chats', chats:documents}
             console.log(chats)
-            const authorSchema = new schema.Entity('authors')
-            const postsSchema = new schema.Entity('posts',{
-                authors:authorSchema,
-            })
-            const normalizedData = normalize(chats, postsSchema)
-            console.log(JSON.stringify(normalizedData,null,2))
-            return {status:"success", payload:normalizedData}
+            return {status:"success", payload:chats}
         }catch(err){
             return {status:"error", error:err}
         }

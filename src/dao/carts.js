@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 const { Schema } = mongoose
-import MongoContainer from "../containers/Container.js";
+import Container from "../containers/Container.js";
 
 export default class CartContainer extends Container{
     constructor(){

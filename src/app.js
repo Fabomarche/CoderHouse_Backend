@@ -4,7 +4,7 @@ import upload from './services/upload.js'
 import __dirname from './utils.js'
 import productsRouter from './routes/productsRoute.js'
 import cartsRouter from './routes/cartsRoute.js'
-import { engine } from 'express-handlebars'
+//import { engine } from 'express-handlebars'
 import { Server } from 'socket.io'
 
 const app = express()
@@ -15,9 +15,9 @@ const server = app.listen(PORT, () => {
 
 export const io = new Server(server)
 
-app.engine('handlebars', engine())
-app.set('views', __dirname+'/views')
-app.set('view engine', 'handlebars')
+//app.engine('handlebars', engine())
+//app.set('views', __dirname+'/views')
+//app.set('view engine', 'handlebars')
 
 const admin = true
 

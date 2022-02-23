@@ -1,6 +1,8 @@
+import dotenv from 'dotenv'
 import mongoose from "mongoose";
+dotenv.config()
 
-mongoose.connect("mongodb+srv://Fabo:escabio69@cluster0.fec30.mongodb.net/ecommerce?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser:true,
     useUnifiedTopology:true
 })

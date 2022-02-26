@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import mongoose from "mongoose";
 dotenv.config()
 
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect('mongodb+srv://Fabo:Progreso22@clusterfabo.hyrfo.mongodb.net/ecommerce?retryWrites=true&w=majority', {
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
